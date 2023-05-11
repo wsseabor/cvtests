@@ -2,7 +2,8 @@
 
 import cv2
 
-cap = cv2.VideoCapture("/Users/schuylerseaborn/desktop/cvtests/assets/testVid.mp4")
+#Get your own file
+cap = cv2.VideoCapture("/File/path/to/a/video.mp4")
 
 if (cap.isOpened() == False):
     print("Error opening the video file")
