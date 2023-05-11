@@ -10,6 +10,8 @@ orb = cv2.ORB_create()
 #Processes each frame in the file while init ORB key points
 def processFrame(img):
     kp, des = orb.detectAndCompute(img, None)
+
+    #Test for kp's to see if we're getting any
     points = []
 
     for p in kp:
