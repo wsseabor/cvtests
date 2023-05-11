@@ -15,6 +15,8 @@ def processFrame(img):
     points = []
 
     for p in kp:
+        u, v = map(lambda x: int(round(x)), p.pt)
+        cv2.circle(img, (u, v), color=(0, 255, 0), radius=4)
         points.append(p)
         print(p)
     
@@ -24,7 +26,7 @@ def processFrame(img):
 if __name__ == "__main__":
 
     #Get your own filepath
-    cap = cv2.VideoCapture('/File/path/to/a/video.mp4')
+    cap = cv2.VideoCapture('/Users/schuylerseaborn/desktop/assets/001.mp4')
 
     while cap.isOpened():
         ret, frame = cap.read()
